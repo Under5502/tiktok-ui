@@ -1,0 +1,87 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: var(--font-family);
+    border-radius: 6px;
+    min-width: 100px;
+    padding: 9px 16px;
+    cursor: pointer;
+    justify-content: center;
+    background-color: var(--while);
+    border: 1px solid transparent;
+    user-select: none;
+
+    + .wrapper {
+        margin-left: 8px;
+    }
+
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+
+.icon {
+    display: inline-block;
+    width: 20 px;
+    text-align: center;
+}
+//button type
+.rounded {
+    color: rgba(22, 24, 35, 0.75);
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 52px;
+    box-shadow: rgba(0 0 0/6%) 0px 2px 8px;
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+.outline {
+    color: var(--primary);
+    border-color: currentColor;
+
+    &:hover {
+        border-color: currentColor;
+        background-color: rgb(254, 44, 85, 0.06);
+    }
+}
+
+.primary {
+    color: var(--while);
+    background-color: var(--primary);
+    border-color: var(--primary);
+
+    &:hover {
+        border-color: var(--primary);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
+    }
+}
+
+.text {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+//Disable
+
+//button size
+.small {
+    min-width: 88px;
+    padding: 4px 16px;
+}
+
+.large {
+    min-width: 140px;
+    padding: 14px 16px;
+}

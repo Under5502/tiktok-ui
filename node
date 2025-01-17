@@ -1,0 +1,49 @@
+làm cho đồng bộ các css scss
+tạo css className : npm i classnames
+import vào các nơi cần css
+import classNames from 'classnames/bind';
+tạo 1 cái : const cx = classNames.bind(styles)
+me thớt bind giúp ràng buộc trỏ vào ô () trong này trỏ vào scss styles
+giúp viết đc dưới dạng dấu gạch ngang như .item-post
+ cách truyền className={cx('clear')}
+cx là cái mình mới gọi trong này clear là phần class name
+
+            TIPPY
+Tippy add vào làm cho mình dùn sẽ hiện chữ ở dưới
+ ví dụ như rê chuột vào ô tìm kiếm sẽ hiện ra chữ ìm kiếm ở dưới
+ cách add :  npm i @tippyjs/react hoặc vào git tìm
+cách kiểm tra : Get-Content package.json | Select-String "tippy" ko sài cái kia đc sài cái này
+cat package.json | grep tippy cái này lỗi tìm cách sửa sau
+  import Tippy from '@tippyjs/react/headless';
+  import 'tippy.js/dist/tippy.css';
+import tippy
+
+              cách sử dụng tippy
+ const HeadlessTippy = () => (
+   <Tippy
+ render={attrs => (
+   <div className="box" tabIndex="-1" {...attrs}>
+ My tippy box */
+ </div> 
+ )}
+   >
+ <button>My button</button> 
+ </Tippy> 
+
+
+                    Tạo các nút bấm khác nhau
+Đặt tên khác nhau sau đó truyền các dữ liệu qua index của nó
+xong add vào 1 cái  const classes = cx('wrapper', {
+  primary,
+  outline,
+  small,
+  large,
+});
+
+như thế này sau đó css cho hợp lý sau đó dùng cho từng cái dễ hơn
+dùng trong <button nut></button> (nut la 1 phần mình tự đặt cho đúng cái mình làm)
+việc này giúp mình sử dụng lại đc các nút này 1 cách dễ hơn
+thêm outline vào trc <button outline nut></button> như thế này sau đó gán giá trị 
+outline = false khi sử dụng outline sẽ hiển thị các nút ra theo cách chúng ta css
+nếu gán bằn true thì k cần gán outline vào button nhưng nó 
+sẽ làm cho cái j đó sai hay sao á k biết
