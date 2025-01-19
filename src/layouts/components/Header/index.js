@@ -20,7 +20,7 @@ import { Link } from 'react-router';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 
-import routesConfig from '~/config/routes';
+import config from '~/config';
 import Menu from '~/components/Popper/Menu';
 import { UploadIcon, MessageIcon, InboxIcon } from '~/components/Icons';
 import Image from '~/components/Image';
@@ -104,7 +104,7 @@ function Header() {
         //trong inner có logo, search, actions(actions là phần đăng nhập này kia bên phải)
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routesConfig.home} className={cx('logoLink')}>
+                <Link to={config.routes.home} className={cx('logoLink')}>
                     <img src={images.logo} alt="TikTok" />
                 </Link>
 
